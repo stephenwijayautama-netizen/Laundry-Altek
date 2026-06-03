@@ -1,0 +1,23 @@
+# Ignore vendor and node_modules folders
+**/node_modules/
+**/vendor/
+
+# Ignore environment files
+**/.env
+**/.env.backup
+**/.env.production
+
+# Laravel specific files
+**/*.log
+**/.phpunit.result.cache
+**/.phpunit.cache/
+**/public/build/
+**/public/hot/
+**/public/storage
+**/storage/*.key
+**/storage/pail
+
+# OS generated files
+.DS_Store
+Thumbs.db
+__MACOSX/

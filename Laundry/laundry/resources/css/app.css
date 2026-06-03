@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+    .btn-premium {
+        @apply bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg font-semibold flex items-center transition-all shadow-sm active:scale-95;
+    }
+    .btn-white {
+        @apply bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium flex items-center hover:bg-gray-50 transition-all shadow-sm;
+    }
+    .input-standard {
+        @apply border border-gray-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-200/50 outline-none transition-all;
+    }
+    .btn-pagination {
+        @apply w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 transition-all;
+    }
+    .btn-pagination.active {
+        @apply bg-teal-600 border-teal-600 text-white;
+    }
+    .btn-pagination.disabled {
+        @apply opacity-50 cursor-not-allowed pointer-events-none;
+    }
+}
